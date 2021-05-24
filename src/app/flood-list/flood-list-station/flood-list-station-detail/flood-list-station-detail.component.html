@@ -1,33 +1,30 @@
-<app-header></app-header>
-<div *ngIf="loading"><app-spinner></app-spinner></div>
-<div *ngIf="!loading">
-  <!--display the station information-->
-
-  <div class="container">
-
-  <h1>{{ stationDetail.items.label }}</h1>
-  <div class="row">
-    <div class="col"><b>Lat/Long</b></div>
-    <div class="col"> {{ stationDetail.items.lat }},{{ stationDetail.items.long }}</div>
-    <div class="col"><b>Northing/Easting</b></div>
-    <div class="col">{{ stationDetail.items.northing }}N {{stationDetail.items.easting }}E</div>
+<div class="container">
+  <app-header></app-header>
+  <div *ngIf="loading"><app-spinner></app-spinner></div>
+  <div *ngIf="!loading">
+    <h1>{{ stationDetail.items.label }}</h1>
+    <div class="row">
+      <div class="col"><b>Lat/Long</b></div>
+      <div class="col"> {{ stationDetail.items.lat }},{{ stationDetail.items.long }}</div>
+      <div class="col"><b>Northing/Easting</b></div>
+      <div class="col">{{ stationDetail.items.northing }}N {{stationDetail.items.easting }}E</div>
+    </div>
+    <div class="row">
+      <div class="col"><b>River Name</b></div>
+      <div class="col"> {{ stationDetail.items.riverName }} </div>
+      <div class="col"><b>Town</b></div>
+      <div class="col">{{ stationDetail.items.town }} </div>
+    </div>
+    <div class="row">
+      <div class="col"><b>Latest Reading</b></div>
+    </div>
+    <div class="row">
+      <div class="col"><b>Value</b></div>
+      <div class="col"> {{ stationDetail.items.measures.latestReading.value }}</div>
+    </div>
+    <div class="row">
+      <div class="col"><b>Reading Taken (DTG)</b></div>
+      <div class="col">{{ stationDetail.items.measures.latestReading.dateTime}}</div>
+    </div>
   </div>
-  <div class="row">
-    <div class="col"><b>River Name</b></div>
-    <div class="col"> {{ stationDetail.items.riverName }} </div>
-    <div class="col"><b>Town</b></div>
-    <div class="col">{{ stationDetail.items.town }} </div>
-  </div>
-  <div class="row">
-    <div class="col"><b>Latest Reading</b></div>
-  </div>
-  <div class="row">
-    <div class="col"><b>Value</b></div>
-    <div class="col"> {{ stationDetail.items.measures.latestReading.value }}</div>
-  </div>
-  <div class="row">
-    <div class="col"><b>Reading Taken (DTG)</b></div>
-    <div class="col">{{ stationDetail.items.measures.latestReading.dateTime}}</div>
-  </div>
-</div>
 </div>
