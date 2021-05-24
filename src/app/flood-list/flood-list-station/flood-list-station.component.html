@@ -1,0 +1,11 @@
+<a
+    style="cursor: pointer"
+    [routerLink]="['/',station.notation]"
+    routerLinkActive="active"
+    class="list-group-item clearfix">
+   <div class="pull-left">
+       <h4 class="list-group-item-heading">{{ station.label }}</h4>
+       <p class="list-group-item-text">Grid Ref: {{station.gridReference }}</p>
+   </div>
+</a>
+

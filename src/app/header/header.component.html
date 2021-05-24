@@ -1,0 +1,24 @@
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-static-top">
+  <div class="container-fluid">
+    <a routerLink="/" class="navbar-brand">Tide Levels</a>
+    <div class="navbar" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-0 mb-lg-0">
+
+      </ul>
+      <form class="d-flex" [formGroup]="searchForm">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search" formControlName="search">
+        <button class="btn btn-outline-success" type="button" (click)="search()" >Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<div class="row">
+  <div class="col" style="text-align: right; padding-right: 20px"><i>When using Search, search is case sensitive, eg when searching for Weymouth search for 'Wey' not 'wey'</i></div>
+</div>
+
+
